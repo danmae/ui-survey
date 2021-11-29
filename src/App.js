@@ -3,7 +3,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Global">
       <Header />
       <h1>intelligent Level Learning Feedback</h1>
       <button>Umfrage starten</button>

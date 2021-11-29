@@ -1,3 +1,30 @@
-.menu-wrapper{
-    background-color: lightcoral;
+@font-face {
+    font-family: Work Sans Light;
+    src: url('../fonts/WorkSans-Light.ttf');
+}
+@font-face {
+    font-family: Work Sans xLight;
+    src: url('../fonts/WorkSans-ExtraLight.ttf');
+}
+@font-face {
+    font-family: Work Sans Regular;
+    src: url('../fonts/WorkSans-Regular.ttf');
+}
+.topnav {
+    overflow: hidden;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: white; 
+    font-family: 'Work Sans Light', sans-serif;
+    height: 60px;
+}
+.topnav p {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 25px;
+  transition: transform .2s;
+}
+.topnav-right {
+  float: right;
 }
