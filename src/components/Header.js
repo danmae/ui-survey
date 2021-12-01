@@ -8,10 +8,10 @@ class Header extends Component {
         <div className="topnav">
             <p>iLL</p>
             <div className="topnav-right">
-                <p>Startseite</p>
-                <p>Umfrage</p>
-                <p>iLL-Frontend</p>
-                <p>Kontakt</p>
+                <span>Startseite</span>
+                <span>Umfrage</span>
+                <span>iLL-Frontend</span>
+                <span>Kontakt</span>
             </div>
         </div>
       </nav>

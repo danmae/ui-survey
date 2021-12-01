@@ -17,6 +17,7 @@
     background-color: white; 
     font-family: 'Work Sans Light', sans-serif;
     height: 60px;
+    line-height: 60px;
 }
 .topnav p {
   float: left;
@@ -27,4 +28,11 @@
 }
 .topnav-right {
   float: right;
+}
+span{
+  margin-left: 25px !important;
+  margin-right: 25px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  line-height: normal !important;
 }
