@@ -5,14 +5,16 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="topnav">
+        <div className="navigation-wrapper">
+          <div className="topnav">
             <p>iLL</p>
             <div className="topnav-right">
-                <span>Startseite</span>
-                <span>Umfrage</span>
-                <span>iLL-Frontend</span>
-                <span>Kontakt</span>
+              <span>Startseite</span>
+              <span>Umfrage</span>
+              <span>iLL-Frontend</span>
+              <span>Kontakt</span>
             </div>
+          </div>
         </div>
       </nav>
     )
