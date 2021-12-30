@@ -20,8 +20,16 @@ class Survey extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          isGoing: true,
-          numberOfGuests: 2
+          plantid: null,
+          machineid: null,
+          usage_frequency: 1,
+          usage_cause: null,
+          usage_function: null,
+          difficulties: null,
+          other_apps: null,
+          could_help: null,
+          intuitivness: null,
+          suggestion: null,
         };
     
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -40,26 +48,128 @@ class Survey extends Component {
   render() {
     return (
         <div className='wrapper'>
-        <h1>Umfrage: Frage 1</h1>
-        <form>
-          <label>
-            Is going:
-            <input
-              name="isGoing"
-              type="checkbox"
-              checked={this.state.isGoing}
-              onChange={this.handleInputChange} />
-          </label>
-          <br />
-          <label>
-            Number of guests:
-            <input
-              name="numberOfGuests"
-              type="number"
-              value={this.state.numberOfGuests}
-              onChange={this.handleInputChange} />
-          </label>
-        </form>
+          <h1 className='heading'>Umfrage - intelligent Level Learning</h1>
+            <form>
+              <label>
+                Welche Maschine wurde genutzt?
+                <input
+                  name="plantid"
+                  type="text"
+                  placeholder='040 - Berlin'
+                  value={this.state.plantid}
+                  onChange={this.handleInputChange}/>
+                <input 
+                  name="machineid"
+                  type="text"
+                  placeholder='Ecoclean - 05005005050'
+                  value={this.state.machineid}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br/>
+              <label>
+                Wie häufig benutzen Sie iLL?
+                <input
+                  name="usage_frequency"
+                  type="number"
+                  placeholder='5'
+                  value={this.state.usage_frequency}
+                  onChange={this.handleInputChange} 
+                /> pro Woche
+              </label>
+              <br/>
+              <label>
+                Warum benutzen Sie iLL?
+                <select
+                  name="usage_cause"
+                  type="text"
+                  value={this.state.usage_cause}
+                  onChange={this.handleInputChange}>
+                  <option value="Instandhaltungsmaßnahme">Instandhaltungsmaßnahme</option>
+                  <option value="Produktionsstörung">Produktionsstörung</option>
+                  <option value="Monitoring">Monitoring</option>
+                </select>
+              </label>
+              <br/>
+              <label>
+                Welche Funktion wurde benutzt?
+                <select
+                  name="usage_function"
+                  type="text"
+                  value={this.state.usage_function}
+                  onChange={this.handleInputChange}>
+                  <option value="Rohdatenplot">Rohdatenplot</option>
+                  <option value="Zustandsverlauf">Zustandsverlauf</option>
+                  <option value="Vorhersage">Vorhersage</option>
+                </select>
+              </label>
+              <br/>
+              <label>
+                Gab es Schwierigkeiten bei der Benutzung der Applikation?
+                <input
+                  name="difficulties"
+                  type="text"
+                  value={this.state.difficulties}
+                  onChange={this.handleInputChange} 
+                />
+              </label>
+              <br/>
+              <label>
+                Wurden andere Applikationen bei der Analyse benutzt?
+                <select
+                  name="other_apps"
+                  type="text"
+                  value={this.state.other_apps}
+                  onChange={this.handleInputChange}>
+                  <option value="PRISMA">PRISMA</option>
+                  <option value="IPRO">IPRO</option>
+                  <option value="Grafana">Grafana</option>
+                </select>
+              </label>
+              <br/>
+              <label>
+                Konnte iLL ihnen weiterhelfen?
+                <input
+                  name="could_help"
+                  type="text"
+                  value={this.state.could_help}
+                  placeholder='Wenn Ja, mit welcher Funktionalität?'
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br/>
+              <label>
+                Wie Intuitiv würden Sie iLL bewerten?
+                <select
+                  name="intuitivness"
+                  type="text"
+                  value={this.state.intuitivness}
+                  onChange={this.handleInputChange}>
+                  <option value="1">1 - gar nicht intuitiv</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - aktzeptabel</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10 - sehr intuitiv</option>
+                </select>
+              </label>
+              <br/>
+              <label>
+                Was für Verbesserungsvorschläge oder Feature-Vorschläge gibt es?
+                <input
+                  name="suggestion"
+                  type="text"
+                  value={this.state.suggestion}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br/>
+              <input type="submit" value="Absenden" />
+            </form>
         </div>
       );
   }
