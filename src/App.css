@@ -15,42 +15,24 @@ body {background-color: white;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-a{
+.button{
   display: block;
   width: 300px;
-  height: 40px;
+  height: 44px;
   line-height: 40px;
   font-size: 18px;
   font-family: sans-serif;
   text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
+  color: #5a5a5a;
+  border: 2px solid #8f8f8f;
   letter-spacing: 2px;
   text-align: center;
   position: relative;
-  transition: all .35s;
+  background: linear-gradient(to left, white 50%, rgb(240, 69, 69) 50%) right; background-size: 200%; transition: .5s ease-out;
 }
 
-a span{
-  position: relative;
-  z-index: 2;
-}
-
-a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff003b;
-  transition: all .35s;
-}
-
-a:hover{
-  color: #fff;
-}
-
-a:hover:after{
-  width: 100%;
+.button:hover{
+  background-position: left;
+  color:white;
+  border: 0px solid #8f8f8f;
 }

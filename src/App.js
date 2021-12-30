@@ -1,16 +1,21 @@
 import './App.css';
 import Header from './components/Header';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Kontakt from './components/kontakt';
+import Survey from './components/survey';
+import Landingpage from './components/landingpage';
 
 function App() {
   return (
     <div className="page">
-      <Header />
-        <div className="startscreen">
-          <h1>intelligent Level Learning Feedback</h1>
-          <div className="wrapper">
-            <a href="#"><span>Umfrage starten</span></a>
-          </div>
-        </div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Landingpage}/>
+          <Route path="/survey" component={Survey}/>
+          <Route path="/kontakt" component={Kontakt}/>
+        </Switch>
+      </Router>
     </div>
   );
 }

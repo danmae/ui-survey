@@ -34,10 +34,12 @@
 .topnav-right {
   float: right;
 }
-span{
+a{
   margin-left: 25px !important;
   margin-right: 25px !important;
   display: inline-block !important;
   vertical-align: middle !important;
   line-height: normal !important;
+  text-decoration: none !important;
+  color:rgb(54, 54, 54) !important;
 }
