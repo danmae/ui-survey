@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './survey.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
 
@@ -54,10 +53,13 @@ class Survey extends Component {
 
   render() {
     return (
+      <div className='startscreen'>
         <div className='wrapper'>
           <h1 className='heading'>Umfrage - intelligent Level Learning</h1>
-          <Link to='/question_one'>Befragung Starten</Link>
-
+          <p>Die Befragung umfasst 9 Fragen und dauert im Schnitt 6 Minuten.</p>
+          <br></br>
+          <Link to='/question_one' className='react-link'>Befragung Starten</Link>
+        </div>
         </div>
       );
   }

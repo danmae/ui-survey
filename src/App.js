@@ -13,8 +13,6 @@ import question_six from './components/questionaire/question_six';
 import question_seven from './components/questionaire/question_seven';
 import question_eight from './components/questionaire/question_eight';
 import question_nine from './components/questionaire/question_nine';
-import question_ten from './components/questionaire/question_ten';
-import question_eleven from './components//questionaire/question_eleven';
 
 function App() {
   return (
@@ -34,8 +32,6 @@ function App() {
           <Route path="/question_seven" component={question_seven}/>
           <Route path="/question_eight" component={question_eight}/>
           <Route path="/question_nine" component={question_nine}/>
-          <Route path="/question_ten" component={question_ten}/>
-          <Route path="/question_eleven" component={question_eleven}/>
         </Switch>
       </Router>
     </div>

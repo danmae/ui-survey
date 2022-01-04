@@ -1,9 +1,29 @@
 .wrapper{
-    width:90%;
     font-size: x-large;
     line-height: 2em;
 }
 .heading{
     text-align: center !important;
     padding-bottom: 35px !important;
+}
+.startscreen {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.question_heading{
+    padding-bottom:25px !important;
+  }
+.question_body{
+    padding-bottom: 25px !important;
+}
+.react-link{
+    font-size: medium !important;
+    font-weight: bold;
+    padding: 5px !important;
+    border: 2px solid rgb(98, 98, 98);
 }
