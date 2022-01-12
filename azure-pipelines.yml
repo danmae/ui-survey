@@ -1,24 +1,21 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- main
+  - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: Azure Pipelines
+  vmImage: 'ubuntu-18.04'
+variables:
+  git_password: $(git_password_env)
+  git_username: $(git_username_env)
+  git_clone_url: $(git_clone_url_env)
 
 steps:
-- task: Npm@1
-  inputs:
-    command: 'install'
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    customCommand: 'run build'
-- task: Npm@1
-  inputs:
-    command: 'publish'
-    publishRegistry: 'useFeed'
-    publishFeed: '08b41690-5de0-4b9b-b603-70d77a38dea5/8a79152d-f195-40eb-a431-d48e64d54572'
+
+  - script: |
+      echo Starting push to Kudu Repository of App Service
+      ECHO GIT CHECKOUT integration
+      git checkout -b deployment_branch
+      ECHO GIT STATUS
+      git status
+      git push -f https://$(git_username):$(git_password)@$(git_clone_url) deployment_branch:master
+    displayName: 'Push integration to Remote Repository'
