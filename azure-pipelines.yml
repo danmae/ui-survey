@@ -17,4 +17,8 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run build'
-    
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: '08b41690-5de0-4b9b-b603-70d77a38dea5/8a79152d-f195-40eb-a431-d48e64d54572'
